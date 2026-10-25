@@ -22,3 +22,25 @@ console.log("Multiplication:", firstNumber * secondNumber);
 console.log("Division:", firstNumber / secondNumber);
 console.log("First skill:", skills[0]);
 console.log("Student information:", student);
+
+
+let ages = 25;
+
+if (ages >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are not an adult.");
+}
+
+// truth and falsy values
+const isLoggedIn = true;
+const hasAccess = false;
+
+if (isLoggedIn && hasAccess) {
+  console.log("You have access to the system.");
+} else {
+  console.log("You do not have access to the system.");
+}
+
+console.log( typeof NaN);
+console.log( typeof null);
