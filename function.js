@@ -29,5 +29,21 @@ function greet(name) {
 // calling the function
 greet("Shoyeb");
 
+// arrow function
+const greetArrow = (name) => {
+    console.log("Hello, " + name + "!");
+}
 
+greetArrow("Alice");
 
+// function expression
+const greetExpression = function(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greetExpression("Bob");
+
+// single line arrow function
+const greetSingleLine = name => console.log("Hello, " + name + "!");
+
+greetSingleLine("Charlie"); 
