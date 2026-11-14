@@ -1,0 +1,1 @@
+console.log("Module 04: JavaScript Functions and Scope");
