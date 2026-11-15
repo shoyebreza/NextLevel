@@ -1,15 +1,16 @@
 function getDayType(day) {
   const normalizedDay = day.trim().toLowerCase();
+  const weekendDays = ["friday","Friday", "saturday", "sunday"];
+  const workingDays = ["monday", "tuesday", "wednesday", "thursday"];
 
-  if (["friday", "Friday", "saturday", "sunday"].includes(normalizedDay)) {
-    return "Weekend";
+  switch (true) {
+    case weekendDays.includes(normalizedDay):
+      return "Weekend";
+    case workingDays.includes(normalizedDay):
+      return "Working Day";
+    default:
+      return "Invalid Day";
   }
-
-  if (["monday", "tuesday", "wednesday", "thursday"].includes(normalizedDay)) {
-    return "Working Day";
-  }
-
-  return "Invalid Day";
 }
 
 const dayInput = document.getElementById("weekend-input");
