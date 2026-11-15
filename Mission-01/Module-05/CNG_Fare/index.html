@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNG Fare Meter</title>
+</head>
+<body>
+    <h1>CNG Fare Meter</h1>
+    <p>Welcome to the CNG Fare Meter!</p>
+    <label for="distance-input">Enter distance traveled (in km):</label>
+    <input type="number" id="distance-input" placeholder="Enter distance in km">
+    <label for="waiting-input">Waiting time (in minutes):</label>
+    <input type="number" id="waiting-input" value="0" min="0">
+    <label for="night-input">
+        <input type="checkbox" id="night-input">
+        Night fare
+    </label>
+    <p>Result: <output id="fare-output"></output></p>
+</body>
+<script src="app.js"></script>
+</html>
