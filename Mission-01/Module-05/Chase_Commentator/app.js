@@ -25,3 +25,4 @@ const getChaseVerdict = (target, scored, ballsLeft) => {
   return `Need ${runsNeeded} runs in ${ballsLeft} balls | ${verdict}`;
 };
 
+console.log(getChaseVerdict(150, 100, 30)); // Example usage
