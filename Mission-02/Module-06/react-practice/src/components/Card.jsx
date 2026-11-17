@@ -3,14 +3,23 @@ import './Card.css';
 
 const Card = ({ name, age }) => {
 
-    if(age < 18){
-        return (
-            <div className="card"> you are not allowed to see this content</div>
-        )
+    const clickHandeler = ({name, age}) => {
+        alert(`Card clicked! Name: ${name}, Age: ${age}`);
     }
 
+    const anotherClickHandeler = () => {
+        console.log(`Card clicked! Name: ${name}, Age: ${age}`);
+    }
+
+
+    const greeting = ({name, age}) => {
+        clickHandeler({name, age});
+        anotherClickHandeler();
+
+    }
+    
     return (
-        <div className="card">
+        <div onClick={() => greeting({ name, age })} className="card">
             <h2>Card Title</h2>
             <p>This is the card content.</p>
             <p>Name: {name}</p>
