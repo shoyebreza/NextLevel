@@ -21,7 +21,7 @@ function App() {
     e.preventDefault();
     // *? first method
     // setMembers([...members, { name, age }]);
-    setMembers((prev) => [...prev, { name, age }]);
+    setMembers((previousData) => [...previousData, { name, age }]);
     setName("");
     setAge(0);
   };
