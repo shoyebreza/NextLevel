@@ -1,30 +1,24 @@
-
+import './Card.css';
 // PROPS and childreen
 
-const Card = (props) => {
+const Card = ({ children, firstName, lastName, age }) => {
+
+    if(age < 18){
+        return (
+            <div className="card"> you are not allowed to see this content</div>
+        )
+    }
+
     return (
-        <div>
+        <div className="card">
             <h2>Card Title</h2>
             <p>This is the card content.</p>
-            <p>First Name: {props.firstName}</p>
-            <p>Last Name: {props.lastName}</p>
-            <p>Age: {props.age}</p>
-            {props.children}
+            <p>First Name: {firstName}</p>
+            <p>Last Name: {lastName}</p>
+            <p>Age: {age}</p>
+            {children}
         </div>
     );
 };
-
-// const Card = ({ children, firstName, lastName, age }) => {
-//     return (
-//         <div>
-//             <h2>Card Title</h2>
-//             <p>This is the card content.</p>
-//             <p>First Name: {firstName}</p>
-//             <p>Last Name: {lastName}</p>
-//             <p>Age: {age}</p>
-//             {children}
-//         </div>
-//     );
-// };
 
 export default Card;
