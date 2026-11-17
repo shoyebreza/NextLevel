@@ -1,7 +1,7 @@
 import './Card.css';
 // PROPS and childreen
 
-const Card = ({ children, firstName, lastName, age }) => {
+const Card = ({ name, age }) => {
 
     if(age < 18){
         return (
@@ -13,10 +13,8 @@ const Card = ({ children, firstName, lastName, age }) => {
         <div className="card">
             <h2>Card Title</h2>
             <p>This is the card content.</p>
-            <p>First Name: {firstName}</p>
-            <p>Last Name: {lastName}</p>
+            <p>Name: {name}</p>
             <p>Age: {age}</p>
-            {children}
         </div>
     );
 };
